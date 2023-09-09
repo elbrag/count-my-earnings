@@ -4,7 +4,7 @@ interface InputProps {
 	label?: string;
 	value?: string | number;
 	name: string;
-	onChange?: () => void;
+	onChange?: (e: any) => void;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -23,6 +23,7 @@ const Input: React.FC<InputProps> = ({
 					type={type}
 					placeholder={placeholder}
 					name={name}
+					value={value}
 					onChange={onChange}
 				/>
 			</label>

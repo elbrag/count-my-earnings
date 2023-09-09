@@ -1,15 +1,16 @@
-// pages/_app.tsx
-
 import React from "react";
-import "../css/globals.css"; // Import your global CSS file here
+import "../css/globals.css";
+import AppContextProvider from "@/context/appContext";
+import Navigation from "@/components/Navigation";
 
 function MyApp({ Component, pageProps }: { Component: any; pageProps: any }) {
-	// You can add any application-wide logic here
-
 	return (
-		<>
-			<Component {...pageProps} />
-		</>
+		<AppContextProvider>
+			<main>
+				<Navigation />
+				<Component {...pageProps} />
+			</main>
+		</AppContextProvider>
 	);
 }
 
