@@ -1,0 +1,1 @@
+# count-my-earnings
