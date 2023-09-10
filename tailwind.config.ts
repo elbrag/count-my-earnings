@@ -14,6 +14,7 @@ const config: Config = {
 	safelist: [
 		{ pattern: /max-w-./ },
 		{ pattern: /text-./ },
+		{ pattern: /bg-./ },
 		{ pattern: /border-./ },
 	],
 };

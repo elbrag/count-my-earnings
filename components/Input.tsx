@@ -4,6 +4,7 @@ interface InputProps {
 	label?: string;
 	value?: string | number;
 	name: string;
+	prefix?: string;
 	suffix?: string;
 	onChange?: (e: any) => void;
 }
@@ -14,6 +15,7 @@ const Input: React.FC<InputProps> = ({
 	label,
 	value,
 	name,
+	prefix,
 	suffix,
 	onChange,
 }) => {
@@ -21,11 +23,12 @@ const Input: React.FC<InputProps> = ({
 		<div className="">
 			<label className="text-lg font-medium" htmlFor={name}>
 				<p className="">{label && label}</p>
-				<div className="flex">
+				<div className="flex gap-2">
+					{prefix && <span className="">{prefix}</span>}
 					<input
 						className={`text-black`}
 						style={{
-							maxWidth: `${value && value?.toString()?.length * 16 + 10}px`,
+							maxWidth: `${value ? value?.toString()?.length * 16 + 10 : 48}px`,
 						}}
 						type={type}
 						placeholder={placeholder}

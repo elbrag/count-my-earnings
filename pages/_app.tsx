@@ -6,7 +6,7 @@ import Navigation from "@/components/Navigation";
 function MyApp({ Component, pageProps }: { Component: any; pageProps: any }) {
 	return (
 		<AppContextProvider>
-			<main>
+			<main className="bg-blue-400">
 				<Navigation />
 				<Component {...pageProps} />
 			</main>
